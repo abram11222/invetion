@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girgis & Karmin — دعوة زفاف</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- موسيقى الخلفية -->
+    <audio id="bgm" loop preload="auto"></audio>
+    <button id="musicToggle" class="music-toggle" aria-label="music">
+        <span class="music-icon">♪</span>
+    </button>
+
+    <!-- ===== شاشة فتح الدعوة (مودرن) ===== -->
+    <div id="opening-screen" class="opening-screen">
+        <div class="opening-glow"></div>
+        <div class="bloom-layer" id="bloomLayer"></div>
+        <div class="opening-content" id="openingContent">
+            <p class="opening-hint">دعوة خاصة إليك</p>
+            <div class="seal-ring">
+                <span class="seal-ring-rot"></span>
+                <div class="seal-inner">
+                    <span class="seal-mono">G<span>&amp;</span>K</span>
+                    <span class="seal-sub">Save the Date</span>
+                </div>
+            </div>
+            <p class="opening-names">Girgis &amp; Karmin</p>
+            <p class="opening-date">٠١ . ٠٨ . ٢٠٢٦</p>
+            <button id="open-btn" class="open-btn">
+                <span class="open-btn-text">افتح الدعوة</span>
+                <span class="open-btn-icon">✦</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== الدعوة ===== -->
+    <div id="main-invitation" class="main-invitation">
+        <div class="petals" id="petals"></div>
+
+        <!-- Hero -->
+        <section id="hero" class="hero reveal">
+            <div class="hero-inner">
+                <p class="script-accent">بنعمة الله وبركته</p>
+                <div class="monogram">G <span>&amp;</span> K</div>
+                <h1 class="couple-title">Girgis &amp; Karmin</h1>
+
+                <div class="ornament">
+                    <span class="orn-line"></span>
+                    <svg viewBox="0 0 24 24" class="orn-diamond"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></svg>
+                    <span class="orn-line"></span>
+                </div>
+
+                <p class="hero-sub">يتشرّفان بدعوتكم لحضور حفل زفافهما</p>
+
+                <div class="photo-frame">
+                    <span class="frame-flower tl">❀</span>
+                    <span class="frame-flower tr">❀</span>
+                    <span class="frame-flower bl">❀</span>
+                    <span class="frame-flower br">❀</span>
+                    <div class="photo-arch">
+                        <img class="couple-photo" src="couple.jpg" alt="Girgis & Karmin">
+                    </div>
+                </div>
+
+                <div class="date-pill">
+                    <span class="dp-day">السبت</span>
+                    <span class="dp-sep"></span>
+                    <span class="dp-date">١ أغسطس ٢٠٢٦</span>
+                    <span class="dp-sep"></span>
+                    <span class="dp-time">٩:٠٠ مساءً</span>
+                </div>
+
+                <div class="scroll-indicator">
+                    <span>مرّر للأسفل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote -->
+        <section class="quote-section reveal">
+            <div class="quote-inner">
+                <span class="quote-mark">”</span>
+                <p class="quote-text">فما جمعه الله لا يفرقه إنسان</p>
+                <p class="quote-ref">— متى ١٩:٦</p>
+            </div>
+        </section>
+
+        <!-- Countdown -->
+        <section id="countdown" class="countdown-section reveal">
+            <p class="sec-eyebrow">العد التنازلي</p>
+            <h2 class="sec-title">في انتظار اليوم الكبير</h2>
+            <div class="countdown-timer">
+                <div class="cd-card"><span class="cd-num" id="days">00</span><span class="cd-label">Days</span></div>
+                <div class="cd-card"><span class="cd-num" id="hours">00</span><span class="cd-label">Hours</span></div>
+                <div class="cd-card"><span class="cd-num" id="minutes">00</span><span class="cd-label">Minutes</span></div>
+                <div class="cd-card"><span class="cd-num" id="seconds">00</span><span class="cd-label">Seconds</span></div>
+            </div>
+        </section>
+
+        <!-- Schedule timeline -->
+        <section id="schedule" class="schedule-section reveal">
+            <p class="sec-eyebrow">البرنامج</p>
+            <h2 class="sec-title">تفاصيل اليوم</h2>
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <span class="tl-icon">⛪</span>
+                        <h3 class="tl-name">صلاة الإكليل</h3>
+                        <p class="tl-time">الساعة ٩:٠٠ مساءً</p>
+                        <p class="tl-place">كنيسة مار جرجس — ببلوط</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <span class="tl-icon">🥂</span>
+                        <h3 class="tl-name">الحفل</h3>
+                        <p class="tl-time">بعد صلاة الإكليل مباشرةً</p>
+                        <p class="tl-place">قاعة الشيراتون — منفلوط</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue -->
+        <section id="venue" class="venue-section reveal">
+            <p class="sec-eyebrow">الأماكن</p>
+            <h2 class="sec-title">أماكن الاحتفال</h2>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <span class="venue-badge">الإكليل</span>
+                    <h3 class="venue-name">كنيسة مار جرجس</h3>
+                    <p class="venue-address">ببلوط</p>
+                    <a href="https://maps.app.goo.gl/ANRNYzGdNoNqSNkr9" target="_blank" class="map-link">افتح على الخريطة</a>
+                </div>
+                <div class="venue-card">
+                    <span class="venue-badge">الحفل</span>
+                    <h3 class="venue-name">قاعة الشيراتون</h3>
+                    <p class="venue-address">منفلوط</p>
+                    <a href="https://maps.app.goo.gl/JcDsJmRMzskvdU779" target="_blank" class="map-link">افتح على الخريطة</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section id="details" class="details-section reveal">
+            <div class="details-grid">
+                <div class="detail-box">
+                    <span class="detail-icon">🕗</span>
+                    <h3 class="detail-title">الموعد</h3>
+                    <p class="detail-text">نرجو الحضور قبل الموعد بنصف ساعة لمشاركتنا صلاة الإكليل.</p>
+                </div>
+                <div class="detail-box">
+                    <span class="detail-icon">🤍</span>
+                    <h3 class="detail-title">حضوركم بركة</h3>
+                    <p class="detail-text">وجودكم معنا في هذا اليوم هو أجمل هدية وأغلى فرحة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section id="rsvp" class="rsvp-section reveal">
+            <p class="sec-eyebrow light">تأكيد الحضور</p>
+            <h2 class="sec-title light">شاركونا الفرحة</h2>
+            <p class="rsvp-subtitle">لمساعدتنا في التحضير لهذا اليوم السعيد، برجاء تأكيد حضوركم.</p>
+
+            <form id="rsvpForm" class="rsvp-form">
+                <div class="form-group">
+                    <label for="name">الاسم</label>
+                    <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="attending">هل ستحضر؟</label>
+                        <select id="attending" name="attending" required>
+                            <option value="">اختر</option>
+                            <option value="yes">سأحضر بكل سرور</option>
+                            <option value="no">أعتذر عن الحضور</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">عدد الأشخاص</label>
+                        <input type="number" id="guests" name="guests" min="1" placeholder="العدد" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="song">أغنية تحب تسمعها في الفرح</label>
+                    <input type="text" id="song" name="song" placeholder="اسم الأغنية">
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالة تهنئة (اختياري)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="اكتب رسالتك للعروسين"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">إرسال التأكيد</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal">
+            <div class="footer-mono">G <span>&amp;</span> K</div>
+            <p class="footer-text">في انتظار وجودكم معنا</p>
+            <p class="footer-date">١ أغسطس ٢٠٢٦</p>
+        </footer>
+    </div>
+
+    <script src="music.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
